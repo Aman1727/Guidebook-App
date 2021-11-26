@@ -2,7 +2,7 @@
 //  Note+CoreDataProperties.swift
 //  Guidebook App
 //
-//  Created by Aman on 26/11/21.
+//  Created by Aman on 27/11/21.
 //
 //
 
@@ -18,6 +18,7 @@ extension Note {
 
     @NSManaged public var text: String?
     @NSManaged public var date: Date?
+    @NSManaged public var place: Place?
 
 }
 

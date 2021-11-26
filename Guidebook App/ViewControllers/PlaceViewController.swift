@@ -54,7 +54,9 @@ class PlaceViewController: UIViewController {
         //Set the name
         placeNameLabel.text = place?.name
         
-        switchChildViewControllers(infoViewController)
+//        infoViewController.place = self.place
+//        switchChildViewControllers(infoViewController)
+        segmentChanged(self.segmentedControl)
     }
     
     //MARK: Methods
@@ -81,12 +83,16 @@ class PlaceViewController: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
+            infoViewController.place = self.place
             switchChildViewControllers(infoViewController)
         case 1:
+            mapViewController.place = self.place
             switchChildViewControllers(mapViewController)
         case 2:
+            notesViewController.place = self.place
             switchChildViewControllers(notesViewController)
         default:
+            infoViewController.place = self.place
             switchChildViewControllers(infoViewController)
         }
         
